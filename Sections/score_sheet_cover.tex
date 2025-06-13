@@ -1,0 +1,31 @@
+\begin{titlepage}
+    \centering
+
+    \vspace*{\fill} % 垂直居中（在页面顶部插入一段“可拉伸的垂直空白”，让内容自动垂直居中）
+    \begin{center}
+        {\Huge \textbf{深圳大学研究生课程论文}} \\[1cm]
+    \end{center}
+    
+    \zihao{4}
+    \setlength{\tabcolsep}{0.8em}     % 设置表格列间距为 0.8 em
+    \renewcommand{\arraystretch}{2} % 设置表格行距为 2 倍
+    
+    \begin{center}
+        \begin{tabular}{p{15em}p{12em}}
+            %% 如果题目单行放得下，请直接使用 \underline{\hspace{9.5em}} 包裹题目内容
+            题目 \underline{\hspace{3.5em}论文的题目\hspace{3.5em}} & 成绩\makecell[l]{\\ \underline{\hspace{9.5em}}} \\
+            %% 如果题目双行才放得下，请使用 \makecell[l]{{...}} 包裹题目内容
+            % 题目 \makecell[l]{{\hspace{1em}基于区块链的联邦学习\hspace{1em}} \\ \underline{\hspace{0.5em}数据共享机制设计与优化\hspace{0.5em}}} & 成绩\makecell[l]{\\ \underline{\hspace{9.5em}}} \\
+            专业\underline{\hspace{3.5em}计算机技术\hspace{3.5em}} & \makecell[l]{{课程名称{\hspace{1em}课程名称\hspace{1em}}}\\{代\hspace{2em}码\underline{\hspace{2em}11234567\hspace{2em}}}} \\
+            年级\underline{\hspace{4.5em}20xx级\hspace{4.5em}} & 姓名\underline{\hspace{3em}姓 名\hspace{3.5em}} \\
+            学号\underline{\hspace{3.5em}0123456789\hspace{3.5em}} & 时间\underline{\hspace{1em}2025\hspace{1em}}年\underline{\hspace{1em}06\hspace{1em}}月 \\
+            任课教师\underline{\hspace{2.5em}教师的名字\hspace{2.5em}} & \\
+
+            %% 如果需要添加更多行，可以继续在这里添加
+
+            %% 注意，你可以通过控制表格的列宽和行高来调整内容的排版效果，或者\hspace{1em}等命令来调整空白宽度
+        \end{tabular}
+    \end{center}
+
+    \vspace*{\fill} % 垂直居中（在页面底部也插入一段“可拉伸空白”，与顶部那段 `\vspace*{\fill}` 相配合，保证标题页内容整体垂直居中对称）
+\end{titlepage}

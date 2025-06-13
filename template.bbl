@@ -1,0 +1,56 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[McMahan et~al.(2017)McMahan, Moore, Ramage, Hampson, and y~Arcas]{mcmahan2017communication}
+MCMAHAN B, MOORE E, RAMAGE D, et~al.
+\newblock Communication-efficient learning of deep networks from decentralized data\allowbreak[C]//\allowbreak
+Artificial intelligence and statistics.
+\newblock PMLR, 2017: 1273-1282.
+
+\bibitem[Yang et~al.(2019)Yang, Liu, Chen, and Tong]{yang2019federated}
+YANG Q, LIU Y, CHEN T, et~al.
+\newblock Federated machine learning: Concept and applications\allowbreak[J].
+\newblock ACM Transactions on Intelligent Systems and Technology (TIST), 2019, 10\allowbreak (2): 1-19.
+
+\bibitem[Zhang et~al.(2024)Zhang, Liu, Hua, and Cao]{zhang2024fedtgp}
+ZHANG J, LIU Y, HUA Y, et~al.
+\newblock Fedtgp: Trainable global prototypes with adaptive-margin-enhanced contrastive learning for data and model heterogeneity in federated learning\allowbreak[C]//\allowbreak
+Proceedings of the AAAI conference on artificial intelligence: Vol.~38.
+\newblock 2024: 16768-16776.
+
+\bibitem[Hard et~al.(2018)Hard, Rao, Mathews, Ramaswamy, Beaufays, Augenstein, Eichner, Kiddon, and Ramage]{hard2018federated}
+HARD A, RAO K, MATHEWS R, et~al.
+\newblock Federated learning for mobile keyboard prediction\allowbreak[A].
+\newblock 2018.
+
+\bibitem[Bonawitz et~al.(2019)Bonawitz, Eichner, Grieskamp, Huba, Ingerman, Ivanov, Kiddon, Kone{\v{c}}n{\`y}, Mazzocchi, McMahan, et~al.]{bonawitz2019towards}
+BONAWITZ K, EICHNER H, GRIESKAMP W, et~al.
+\newblock Towards federated learning at scale: System design\allowbreak[J].
+\newblock Proceedings of machine learning and systems, 2019, 1: 374-388.
+
+\bibitem[Zhu et~al.(2023)Zhu, Cao, Saxena, Jiang, and Ferradi]{zhu2023blockchain}
+ZHU J, CAO J, SAXENA D, et~al.
+\newblock Blockchain-empowered federated learning: Challenges, solutions, and future directions\allowbreak[J].
+\newblock ACM Computing Surveys, 2023, 55\allowbreak (11): 1-31.
+
+\bibitem[Li et~al.(2020)Li, Sahu, Talwalkar, and Smith]{li2020federated}
+LI T, SAHU A~K, TALWALKAR A, et~al.
+\newblock Federated learning: Challenges, methods, and future directions\allowbreak[J].
+\newblock IEEE signal processing magazine, 2020, 37\allowbreak (3): 50-60.
+
+\bibitem[Li et~al.(2019)Li, Yu, and He]{li2019impact}
+LI H, YU L, HE W.
+\newblock The impact of gdpr on global technology development\allowbreak[J].
+\newblock Journal of Global Information Technology Management, 2019, 22\allowbreak (1): 1-6.
+
+\end{thebibliography}

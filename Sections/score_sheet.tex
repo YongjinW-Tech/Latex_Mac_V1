@@ -1,0 +1,58 @@
+\begin{titlepage}
+    { % 使用内部块
+        \centering % 整个页面居中    
+        {\bfseries\Large 深圳大学研究生课程期末论文评分表 \\[0.8cm]}
+        \raggedright                % 段落从左对齐，避免段落居中影响正文
+
+        \zihao{-4} % 设置正文字体为小四号
+
+        \noindent
+        课程名称：\underline{\hspace{4cm}课程的名称\hspace{4.4cm}}
+
+        \noindent
+        论文题目：\underline{\hspace{1cm}请输入论文标题（通过hspace控制横线长度）\hspace{1cm}}
+
+        \noindent
+        学\hspace{2em}号：\underline{\hspace{1cm}0123456789\hspace{1cm}} \hspace{1em} 姓\hspace{2em}名：\underline{\hspace{3em}名字\hspace{3em}}
+
+        \vspace{0.5cm} % 表格下方留出 0.5cm 的空白
+
+        \raggedright                % 段落从左对齐，避免段落居中影响正文
+        \setstretch{1.25}            % 设置下面段落行间距为 1.25 倍
+        \setlength{\parskip}{0pt}   % 段后间距设为 0
+        % \renewcommand{\arraystretch}{1.8} % 行距增大，视觉美观
+        % \setlength{\tabcolsep}{3pt}       % 列间距调整
+        % 使用 tabularx 表格
+        % 表格部分
+        \renewcommand{\arraystretch}{1.7}   % 行距增大，视觉美观
+        \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}m{5em}|X|>{\centering\arraybackslash}m{4em}|>{\centering\arraybackslash}m{4em}|}
+            \hline  % 划线
+            \textbf{指标} & \textbf{评分标准} & \textbf{分值} & \textbf{得分} \\
+            \hline
+            文献 & 文献资料是否恰当、详实；是否具有代表性；是否有述有评。 & 10 &  \\
+            \hline
+            选题 & 选题是否新颖；是否有理论意义或实用价值；是否与授课内容相符。 & 10 &  \\
+            \hline
+            规范 & 篇幅字数在规定要求范围内；文字表达是否准确、流畅；论述是否具有论辩性；图表计量单位是否规范；是否符合学术道德规范，论文独立完成，无抄袭现象。 & 30 &  \\
+            \hline
+            论证 & 研究方案是否具有可行性；是否能较好运用所学知识，观点明确；思路是否清晰；逻辑是否严密；结构是否严谨；论证是否充分。 & 30 &  \\
+            \hline
+            实用价值 & 调研成果是否具有实际应用价值；是否提出了可行的建议或解决方案；是否对相关领域有参考意义；是否体现创新思维。 & 20 &  \\
+            \hline
+            其他意见（选填） & \multicolumn{3}{l|}{} \\ % 不使用'\rule{10cm}{0pt}',这样以防表格最右端的线不贴合表格，出现短断裂（如下一行所示，可以取消下一行的注释对比效果）
+            % 其他意见（选填） & \multicolumn{3}{l|}{\rule{10cm}{0pt}} \\
+            \hline
+            \multicolumn{2}{|l|}{\textbf{任课教师签名：}\rule{7cm}{0pt}} & \multicolumn{2}{l|}{\textbf{总分：}} \\  % 不使用'\rule{3cm}{0pt}'，这样以防表格最右端的线不贴合表格，出现短断裂（如下一行所示，可以取消下一行的注释对比效果）
+            % \multicolumn{2}{|l|}{任课教师签名：\rule{7cm}{0pt}} & \multicolumn{2}{l|}{总分：\rule{3cm}{0pt}} \\
+            % \hline  % 不使用\hline实线，使两行在PDF中紧密相连，从视觉上变成一行
+            \multicolumn{2}{|l|}{\hspace{13em}年\underline{\hspace{1cm}}月\underline{\hspace{1cm}}日} & \multicolumn{2}{l|}{}\\
+            \hline
+        \end{tabularx}
+
+        \vspace{0.5cm} % 表格下方留出 0.5cm 的空白
+        \small
+        \noindent
+        1. 该表应在期末考试前由任课教师发给学生，告知学生论文评分标准；\\
+        2. 学生应在提交期末论文时，封面附上该表并补充填写好表格基本个人信息。
+    }
+\end{titlepage}

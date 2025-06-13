@@ -1,0 +1,147 @@
+\documentclass[12pt]{ctexart}
+
+%% 页面边距设置
+\usepackage{geometry}
+\geometry{a4paper, left=3.18cm, right=3.18cm, top=2.54cm, bottom=2.54cm}
+
+%% 页眉和页脚设置
+\usepackage{fancyhdr} % 引入 fancyhdr 包: 用于自定义页眉和页脚
+\usepackage{lastpage} % 引入 lastpage 包: 用于获取总页数
+\pagestyle{fancy}     % 设置页眉和页脚样式为 fancy
+\fancyhf{}            % 清空默认的页眉和页脚
+\fancyhead[C]{\textbf{标题模板}} % 页眉标题
+\fancyfoot[C]{第 \thepage 页，共 \pageref{LastPage} 页}
+
+%% 调整页眉高度
+\setlength{\headheight}{14.5pt} % 设置页眉高度为 14.5pt
+\addtolength{\topmargin}{-1.5pt} % 调整顶部边距以补偿页眉高度的增加
+
+%% 字体和格式设置
+\usepackage{fontspec}
+\setmainfont{Times New Roman}  % 英文字体（想使用默认字体请注释）
+
+%% 行间距和段落格式
+\usepackage{setspace}
+\setstretch{1.5} % 设置行间距为 1.5 倍
+\setlength{\parskip}{0.5\baselineskip} % 段后间距为 0.5 行
+\setlength{\parindent}{2em} % 首行缩进 2 个字符
+
+%% 使用 ulem 宏包
+\usepackage[normalem]{ulem} % 引入 ulem 包: 用于下划线和删除线等文本样式
+
+%% 图片和图形设置
+\usepackage{graphicx} % 引入 graphicx 宏包，用于插入图片
+
+%% 表格设置
+\usepackage{tabularx} % 引入 tabularx 宏包
+\usepackage{booktabs} % 引入 booktabs 宏包，用于表格线条美化
+\usepackage{array} % 引入 array 宏包，用于表格列格式设置
+\usepackage{makecell} % 引入 makecell 包: 用于表格单元格内换行
+
+%% 列表样式设置
+\usepackage{enumitem} % 引入 enumitem 包: 用于自定义列表样式
+% 比如：
+% \begin{enumerate}[label=\roman*]  % 使用罗马数字编号，不使用默认的阿拉伯数字
+% \end{enumerate}
+
+%% 参考文献格式包
+\usepackage[sort]{gbt7714} % 引入 gbt7714 包: 用于参考文献格式
+
+
+\begin{document}
+
+% \nocite{*} % 引用所有参考文献（如果你需要将reference.bib中的所有文献都列出，请使用；如果只需要列出在正文引用的文献，请注释掉这一行）
+
+%% 评分表（若不需要请注释掉）
+\pagenumbering{gobble} % 评分表页不显示页码
+\input{Sections/score_sheet.tex} % 加载评分表
+\newpage                % 换页
+
+%% 诚信承诺书（若不需要请注释掉）
+\pagenumbering{gobble} % 诚信承诺书页不显示页码
+\input{Sections/letter_of_commitment.tex} % 加载学术诚信承诺书
+\newpage                % 换页
+
+%% 课程论文封面（若不需要请注释掉）
+\pagenumbering{gobble} % 课程论文封面页不显示页码
+\input{Sections/score_sheet_cover.tex} % 加载课程论文封面
+\newpage                % 换页  
+
+%% 封面页设置（若不需要请注释掉）
+% \title{基于区块链的联邦学习数据共享机制设计与优化}
+% \author{吴勇进}
+% \date{\today}
+% \maketitle
+% \thispagestyle{fancy} % 强制第一页使用 fancy 页眉和页脚，否则第一页默认使用 plain 样式，导致第一页无法显示前面定义的页眉和页脚设置；如果需要封面页与正文的页眉页脚不一致请注释掉这一行
+
+%% 独立标题页
+\begin{titlepage} % 开启一个单独的标题页环境。它会自动插入分页，并允许在这个页面上自由排版，适合封面、标题等单页内容·
+    \centering    % 居中对齐
+    \vspace*{\fill} % 在页面顶部添加垂直空间，使内容垂直居中
+    {\bfseries\Huge 标题模板 \\[1cm]}   % 粗体、居中、标题（按顺序分别是：`{ ... }`：局部作用域，控制这行内部的字体格式，不影响后续；`\bfseries`：粗体字，即Bold；`\Huge`：字号非常大，适合标题，比 `\huge` 还大一级）；论文标题；`\\[1cm]`：换行，并在这一行后额外插入 1cm 的垂直空白，让标题和作者名之间留出适当间距）
+    {\Large 课程名称：XXX \\[0.5cm]} % 课程名称
+    {\Large 课程代码：XXXXXX \\[0.5cm]} % 课程代码
+    {\Large 指导教师（授课老师）：XXX \\[0.5cm]} % 指导教师
+    {\Large 学院：XXX \\[0.5cm]} % 学院名称
+    {\Large 专业：XXX \\[0.5cm]} % 专业名称
+    {\Large 姓名：XXX \\[0.5cm]} % 姓名
+    {\Large 学号：XXXXXXXX \\[0.5cm]} % 学号
+    {\Large 完成日期：\today \\[0.5cm]} % 完成日期
+    {\Large 提交日期：XXXX年XX月XX日 \\[0.5cm]} % 提交日期
+    \vspace*{\fill} % 在页面底部添加垂直空间，使内容垂直居中
+\end{titlepage}
+
+%% 摘要页设置
+\pagenumbering{Roman}   % 设置摘要页的页码格式为罗马数字（Roman为大写、roman为小写）
+\pagestyle{plain}       % 使用 plain 样式，清空页眉，仅显示页脚页码
+\input{Sections/abstract.tex} % 加载摘要
+\newpage                % 换页
+
+%% 目录设置
+\pagenumbering{arabic}  % 重新编号为阿拉伯数字
+\pagestyle{plain}       % 使用 plain 样式
+\tableofcontents        % 生成目录
+\newpage                % 换页
+
+\zihao{-4}  % 从正文开始设置字体为小四
+
+%% 加载独立的正文内容文件
+\setcounter{page}{1}    % 从正文开始重新编号页码
+\pagestyle{fancy}       % 使用 fancy 样式（符合前面对正文页脚设置格式）
+\input{Sections/1-Introduction.tex}  % 加载引言
+\newpage                % 换页
+\input{Sections/2-Content.tex}       % 加载正文内容
+\newpage
+\input{Sections/3-Conclusion.tex}    % 加载结论
+\newpage
+
+%% 引用参考文献
+\bibliographystyle{gbt7714-numerical}
+\bibliography{reference}
+
+\end{document}
+
+%% LaTeX 字体命令参考字体
+% LaTeX 实际字号会依赖于 documentclass 里设定的基本字号（比如 10pt、11pt、12pt）
+% 下面我以常用的 12pt 版式为例给你做标准对照，符合国内论文排版习惯，方便在论文中选用：
+% LaTeX 命令     大致字号     中文习惯称呼     常用场景
+% \Huge         24pt        小初（接近）     论文封面、论文题目
+% \huge         20pt        小一（接近）     正文一级大标题
+% \LARGE       17pt        二号（接近）     封面副标题、扉页标题
+% \Large       14pt        三号（接近）     正文大标题、小节标题
+% \large       12pt        小四（正文字号） 正文内适当放大
+% \normalsize  12pt        小四             正文默认
+% \small       11pt        五号偏小         脚注、附表说明
+% \footnotesize 10pt        五号             脚注、参考文献
+% \scriptsize  8pt         小五             表格中小字、附注
+% \tiny        6pt         小六             非常小，几乎不用
+
+
+%% 补充国内常用 \zihao{} 对照（学位论文最常用）
+%| \zihao{0} | 42pt | 初号 |
+%| \zihao{-0} | 36pt | 小初号 |
+%| \zihao{1} | 26pt | 一号 |
+%| \zihao{2} | 22pt | 二号 |
+%| \zihao{3} | 16pt | 三号 |
+%| \zihao{4} | 14pt | 四号（正文字号推荐） |
+%| \zihao{5} | 10.5pt | 五号 |
