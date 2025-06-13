@@ -1,0 +1,35 @@
+# 忽略临时文件、日志文件
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# 临时编辑文件
+*~
+
+# Mac 系统垃圾文件
+.DS_Store
+
+# VSCode 编辑器的配置文件（如果你不想提交可以屏蔽）
+.vscode/
+
+# Fonts 目录（建议：字体文件不必要上传）
+Fonts/
+
+# 自动生成的 pdf 文件（如果你不希望提交输出文档）
+# *.pdf
+
+# 参考文献临时文件
+*.bcf
+*.run.xml
